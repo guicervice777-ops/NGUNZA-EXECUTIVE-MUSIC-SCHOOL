@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ngunza Executive Music School</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+    }
+
+    /* =========================
+       CABEÇALHO
+    ========================= */
+
+    header {
+      width: 100%;
+      height: 90px;
+      padding: 0 25px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #000;
+      border-bottom: 1px solid #d4af37;
+    }
+
+    .logo {
+      color: #d4af37;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .menu {
+      color: #d4af37;
+      font-size: 34px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 90vh;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 60px 25px;
+
+      background: #000;
+    }
+
+    .hero h1 {
+      color: #d4af37;
+
+      font-size: 40px;
+      line-height: 1.12;
+
+      margin-bottom: 25px;
+    }
+
+    .hero h2 {
+      color: #fff;
+
+      font-size: 22px;
+      line-height: 1.4;
+
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+
+      color: #ddd;
+
+      font-size: 17px;
+      line-height: 1.8;
+
+      margin-bottom: 35px;
+    }
+
+    /* =========================
+       BOTÕES
+    ========================= */
+
+    .buttons {
+      width: 100%;
+      max-width: 380px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      display: block;
+
+      padding: 17px 20px;
+
+      text-decoration: none;
+      text-align: center;
+
+      font-size: 16px;
+      font-weight: bold;
+
+      border-radius: 6px;
+    }
+
+    .btn-primary {
+      background: #d4af37;
+      color: #000;
+    }
+
+    .btn-secondary {
+      background: #000;
+      color: #d4af37;
+
+      border: 2px solid #d4af37;
+    }
+
+    /* =========================
+       QUEM SOMOS
+    ========================= */
+
+    .about {
+      background: #fff;
+      color: #111;
+
+      padding: 80px 25px;
+    }
+
+    .about-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: block;
+
+      color: #b89532;
+
+      font-size: 14px;
+      font-weight: bold;
+
+      letter-spacing: 3px;
+
+      margin-bottom: 20px;
+    }
+
+    .about h2 {
+      color: #111;
+
+      font-size: 38px;
+      line-height: 1.15;
+
+      margin-bottom: 30px;
+    }
+
+    .about h2 span {
+      color: #b89532;
+    }
+
+    .about p {
+      color: #444;
+
+      font-size: 17px;
+      line-height: 1.8;
+
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       MISSÃO E VISÃO
+    ========================= */
+
+    .mission-box,
+    .vision-box {
+
+      margin-top: 30px;
+
+      padding: 25px;
+
+      background: #f5f5f5;
+
+      border-left: 4px solid #d4af37;
+    }
+
+    .mission-box h3,
+    .vision-box h3 {
+
+      color: #111;
+
+      font-size: 21px;
+
+      margin-bottom: 10px;
+    }
+
+    .mission-box p,
+    .vision-box p {
+
+      color: #444;
+
+      margin-bottom: 0;
+    }
+
+    /* =========================
+       TELEMÓVEL
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero h2 {
+        font-size: 21px;
+      }
+
+      .about h2 {
+        font-size: 36px;
+      }
+
+    }
+.courses {
+  background: #000;
+  color: #fff;
+  padding: 80px 25px;
+}
+
+.courses-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.courses h2 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.courses h2 span {
+  color: #d4af37;
+}
+
+.courses-intro {
+  color: #ccc;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.course-card {
+  position: relative;
+  background: linear-gradient(145deg, #151515, #080808);
+  border: 1px solid #6f5a1d;
+  border-radius: 14px;
+  padding: 30px 24px;
+  margin-bottom: 22px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.course-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #d4af37;
+}
+
+.course-card h3 {
+  color: #d4af37;
+  font-size: 24px;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.course-card p {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  border-color: #d4af37;
+}
+
+.why {
+  background: #fff;
+  color: #111;
+  padding: 80px 25px;
+}
+
+.why-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.why h2 {
+  color: #111;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.why h2 span {
+  color: #b89532;
+}
+
+.why-intro {
+  color: #444;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.why-card {
+  background: #f5f5f5;
+  border-left: 4px solid #d4af37;
+  padding: 24px 20px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+}
+
+.why-card h3 {
+  color: #111;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.why-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+.projects {
+  background: #000;
+  color: #fff;
+  padding: 80px 25px;
+}
+
+.projects-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projects h2 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.projects h2 span {
+  color: #d4af37;
+}
+
+.projects-intro {
+  color: #ccc;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  background: #111;
+  border: 1px solid #6f5a1d;
+  border-radius: 14px;
+  padding: 28px 22px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #d4af37;
+}
+
+.project-card h3 {
+  color: #d4af37;
+  font-size: 23px;
+  margin-bottom: 12px;
+}
+
+.project-card p {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+.founder {
+  background: #fff;
+  color: #111;
+  padding: 80px 25px;
+}
+
+.founder-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.founder h2 {
+  color: #111;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.founder h2 span {
+  color: #b89532;
+}
+
+.founder-role {
+  color: #777;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+
+.founder p {
+  color: #444;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.founder-quote {
+  margin-top: 35px;
+  padding: 28px 22px;
+  background: #f5f5f5;
+  border-left: 4px solid #d4af37;
+}
+
+.founder-quote p {
+  color: #222;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.7;
+}
+.founder-photo {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 35px;
+  border: 2px solid #d4af37;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.founder-photo img {
+  width: 100%;
+  display: block;
+}
+.cta {
+  background: #000;
+  color: #fff;
+  padding: 85px 25px;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.cta h2 {
+  color: #d4af37;
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  color: #ddd;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #d4af37;
+  color: #000;
+  text-decoration: none;
+  padding: 17px 28px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.services {
+  background: #fff;
+  color: #111;
+  padding: 80px 25px;
+}
+
+.services-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services h2 {
+  color: #111;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.services h2 span {
+  color: #b89532;
+}
+
+.services-intro {
+  color: #444;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.service-card {
+  background: #f5f5f5;
+  border-left: 4px solid #d4af37;
+  padding: 25px 20px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+}
+
+.service-card h3 {
+  color: #111;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact {
+  background: #000;
+  color: #fff;
+  padding: 80px 25px;
+}
+
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  color: #fff;
+  font-size: 38px;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.contact h2 span {
+  color: #d4af37;
+}
+
+.contact-intro {
+  color: #ccc;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 35px;
+}
+
+.contact-item {
+  background: #111;
+  border: 1px solid #6f5a1d;
+  border-radius: 10px;
+  padding: 22px 20px;
+  margin-bottom: 16px;
+}
+
+.contact-item h3 {
+  color: #d4af37;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.contact-item p {
+  color: #ddd;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contact-button {
+  display: block;
+  margin-top: 30px;
+  background: #d4af37;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  padding: 17px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 55px 25px 30px;
+  text-align: center;
+  border-top: 1px solid #6f5a1d;
+}
+
+.footer-logo {
+  color: #d4af37;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.footer-line {
+  width: 60px;
+  height: 2px;
+  background: #d4af37;
+  margin: 25px auto;
+}
+
+.footer-copy {
+  color: #777;
+  font-size: 13px;
+}
+.menu-button {
+  background: none;
+  border: none;
+  color: #d4af37;
+  font-size: 34px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background: #000;
+  border-bottom: 1px solid #d4af37;
+  padding: 15px 25px;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  display: block;
+}
+
+.mobile-menu a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 5px;
+  border-bottom: 1px solid #333;
+  font-size: 16px;
+}
+
+.mobile-menu a:hover {
+  color: #d4af37;
+}
+  </style>
+  
+</head>
+
+<body>
+
+  <!-- CABEÇALHO -->
+
+  <header>
+
+    <div class="logo">
+      NGUNZA
+    </div>
+
+    <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#sobre" onclick="toggleMenu()">Quem Somos</a>
+  <a href="#cursos" onclick="toggleMenu()">Cursos</a>
+  <a href="#projectos" onclick="toggleMenu()">Projectos</a>
+  <a href="#fundador" onclick="toggleMenu()">Professor & Fundador</a>
+  <a href="#inscricao" onclick="toggleMenu()">Inscrição</a>
+  <a href="#servicos" onclick="toggleMenu()">Serviços</a>
+  <a href="#contactos" onclick="toggleMenu()">Contactos</a>
+</nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <h1>
+      NGUNZA EXECUTIVE<br>
+      MUSIC SCHOOL
+    </h1>
+
+    <h2>
+      Excelência musical. Formação com propósito.
+    </h2>
+
+    <p>
+      Transformamos talento em conhecimento,
+      disciplina em competência e paixão pela
+      música em uma verdadeira jornada de
+      desenvolvimento artístico.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#cursos" class="btn btn-primary">
+        CONHEÇA OS NOSSOS CURSOS
+      </a>
+
+      <a href="#contactos" class="btn btn-secondary">
+        FALE CONNOSCO
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUEM SOMOS -->
+
+  <section class="about" id="sobre">
+
+    <div class="about-content">
+
+      <span class="section-label">
+        QUEM SOMOS
+      </span>
+
+      <h2>
+        Uma escola.<br>
+        Uma missão.<br>
+        <span>Um legado.</span>
+      </h2>
+
+      <p>
+        A Ngunza Executive Music School é uma instituição
+        dedicada à educação e formação musical, criada com
+        o propósito de desenvolver talentos, promover a
+        excelência artística e contribuir para o crescimento
+        da música em Angola.
+      </p>
+
+      <p>
+        Acreditamos que a música vai além da aprendizagem
+        de um instrumento. Ela desenvolve disciplina,
+        criatividade, sensibilidade, confiança e capacidade
+        de expressão.
+      </p>
+
+
+      <!-- MISSÃO -->
+
+      <div class="mission-box">
+
+        <h3>
+          Nossa Missão
+        </h3>
+
+        <p>
+          Promover uma educação musical de qualidade,
+          acessível e transformadora, formando pessoas
+          musicalmente preparadas, criativas, disciplinadas
+          e confiantes.
+        </p>
+
+      </div>
+
+
+      <!-- VISÃO -->
+
+      <div class="vision-box">
+
+        <h3>
+          Nossa Visão
+        </h3>
+
+        <p>
+          Ser uma referência em educação musical em Angola,
+          reconhecida pela qualidade da formação, inovação
+          pedagógica, valorização da cultura e desenvolvimento
+          de novos talentos.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FUTUROS BLOCOS -->
+
+  <section class="courses" id="cursos">
+  <div class="courses-content">
+    
+    <span class="section-label">NOSSOS CURSOS</span>
+    
+    <h2>Encontre o seu <span>caminho musical.</span></h2>
+    
+    <p class="courses-intro">
+      Formação musical pensada para diferentes idades, níveis e objectivos,
+      com acompanhamento personalizado e foco no desenvolvimento artístico.
+    </p>
+    
+    <div class="course-card">
+      <h3>🎹 Piano</h3>
+      <p>
+        Desenvolva técnica, leitura musical, coordenação, interpretação
+        e musicalidade através do piano.
+      </p>
+    </div>
+    
+    <div class="course-card">
+      <h3>🎸 Guitarra</h3>
+      <p>
+        Aprenda acordes, ritmo, técnica, acompanhamento e repertório,
+        desenvolvendo confiança para tocar e interpretar.
+      </p>
+    </div>
+    
+    <div class="course-card">
+      <h3>🎤 Canto</h3>
+      <p>
+        Trabalhe respiração, afinação, projecção vocal, interpretação
+        e expressão artística.
+      </p>
+    </div>
+    
+    <div class="course-card">
+      <h3>🎼 Formação Musical</h3>
+      <p>
+        Desenvolva conhecimentos de teoria musical, leitura, ritmo,
+        percepção auditiva e linguagem musical.
+      </p>
+    </div>
+    
+    <div class="course-card">
+      <h3>💻 Formação Musical Online</h3>
+      <p>
+        Estude música à distância com acompanhamento e orientação,
+        mantendo uma aprendizagem prática e progressiva.
+      </p>
+    </div>
+    
+  </div>
+</section>
+<section class="why">
+  
+  <div class="why-content">
+    
+    <span class="section-label">POR QUE ESCOLHER A NGUNZA?</span>
+    
+    <h2>Mais do que aprender música.<br>
+      <span>É desenvolver potencial.</span>
+    </h2>
+    
+    <p class="why-intro">
+      Na Ngunza Executive Music School, cada aluno é acompanhado
+      de acordo com o seu nível, ritmo e objectivos.
+    </p>
+    
+    <div class="why-card">
+      <h3>🎯 Ensino Personalizado</h3>
+      <p>
+        Cada aluno recebe atenção de acordo com as suas necessidades,
+        capacidades e objectivos musicais.
+      </p>
+    </div>
+    
+    <div class="why-card">
+      <h3>🎼 Formação Completa</h3>
+      <p>
+        Unimos prática, teoria, técnica, interpretação e desenvolvimento
+        da musicalidade.
+      </p>
+    </div>
+    
+    <div class="why-card">
+      <h3>🏆 Excelência e Disciplina</h3>
+      <p>
+        Incentivamos hábitos de estudo, compromisso e dedicação para
+        transformar talento em competência.
+      </p>
+    </div>
+    
+    <div class="why-card">
+      <h3>🌍 Formação Presencial e Online</h3>
+      <p>
+        Criamos possibilidades de aprendizagem adaptadas às diferentes
+        necessidades dos nossos alunos.
+      </p>
+    </div>
+    
+    <div class="why-card">
+      <h3>🇦🇴 Valorização da Cultura</h3>
+      <p>
+        A música angolana e a nossa identidade cultural fazem parte
+        da nossa visão de formação artística.
+      </p>
+    </div>
+    
+    <div class="why-card">
+      <h3>🚀 Visão de Futuro</h3>
+      <p>
+        Preparamos alunos para crescerem não apenas como músicos,
+        mas também como pessoas confiantes, criativas e preparadas.
+      </p>
+    </div>
+    
+  </div>
+  
+</section>
+<section class="projects" id="projectos">
+  
+  <div class="projects-content">
+    
+    <span class="section-label">OS NOSSOS PROJECTOS</span>
+    
+    <h2>Ideias que se transformam em <span>legado.</span></h2>
+    
+    <p class="projects-intro">
+      Criamos projectos musicais e educativos que desenvolvem talentos,
+      estimulam a criatividade e valorizam a música e a cultura.
+    </p>
+    
+    <div class="project-card">
+      <h3>🎤 Vozes que Inspiram</h3>
+      <p>
+        Projecto coral dedicado ao desenvolvimento vocal, musical e artístico,
+        promovendo disciplina, trabalho em equipa e valorização da música angolana.
+      </p>
+    </div>
+    
+    <div class="project-card">
+      <h3>🎵 Musicobrincando</h3>
+      <p>
+        Iniciação musical para crianças através da brincadeira, exploração
+        sonora e contacto com instrumentos musicais.
+      </p>
+    </div>
+    
+    <div class="project-card">
+      <h3>🌟 Pequenos Músicos, Grandes Sonhos</h3>
+      <p>
+        Programa de educação musical infantil que estimula criatividade,
+        confiança, expressão e descoberta dos primeiros talentos musicais.
+      </p>
+    </div>
+    
+    <div class="project-card">
+      <h3>🎹 Teclado Fácil para Adultos</h3>
+      <p>
+        Formação prática e progressiva criada para adultos que desejam
+        aprender teclado de forma simples, musical e motivadora.
+      </p>
+    </div>
+    
+    <div class="project-card">
+      <h3>🤝 Parcerias e Projectos Institucionais</h3>
+      <p>
+        Desenvolvemos programas musicais em parceria com escolas,
+        instituições e organizações interessadas na educação e cultura.
+      </p>
+    </div>
+    
+  </div>
+  
+</section>
+<section class="founder" id="fundador">
+  
+  <div class="founder-content">
+    <div class="founder-photo">
+  <img src="fundador.jpg" alt="Professor e Fundador da Ngunza Executive Music School">
+</div>
+    <span class="section-label">PROFESSOR & FUNDADOR</span>
+    
+    <h2>Guilherme <span>Ngunza</span></h2>
+    
+    <p class="founder-role">
+      MÚSICO • PROFESSOR • EDUCADOR MUSICAL • FUNDADOR
+    </p>
+    
+    <p>
+      A Ngunza Executive Music School nasceu de uma visão:
+      contribuir para o desenvolvimento da educação musical e
+      criar oportunidades para que novos talentos possam crescer
+      através da música.
+    </p>
+    
+    <p>
+      Como músico e educador, Guilherme Ngunza acredita que cada
+      aluno possui um potencial único que pode ser desenvolvido
+      através de conhecimento, disciplina, orientação e paixão
+      pela música.
+    </p>
+    
+    <p>
+      A sua missão é transformar a aprendizagem musical numa
+      experiência de crescimento artístico e pessoal, valorizando
+      tanto a excelência técnica como a identidade cultural.
+    </p>
+    
+    <div class="founder-quote">
+      <p>
+        “Educar através da música é plantar conhecimento,
+        disciplina e sonhos que podem permanecer por gerações.”
+      </p>
+    </div>
+    
+  </div>
+  
+</section>
+<section class="cta" id="inscricao">
+  
+  <div class="cta-content">
+    
+    <span class="section-label">COMECE AGORA</span>
+    
+    <h2>O seu próximo passo na música começa aqui.</h2>
+    
+    <p>
+      Descubra o seu potencial, desenvolva as suas habilidades
+      e faça da música uma parte importante da sua jornada.
+    </p>
+    
+    <a href="#contactos" class="cta-button">QUERO FAZER A MINHA INSCRIÇÃO</a>
+  </div>
+  
+</section>
+<section class="services" id="servicos">
+  
+  <div class="services-content">
+    
+    <span class="section-label">OS NOSSOS SERVIÇOS</span>
+    
+    <h2>Soluções musicais para <span>diferentes caminhos.</span></h2>
+    
+    <p class="services-intro">
+      Oferecemos serviços de formação e desenvolvimento musical
+      adaptados às necessidades de cada aluno, família e instituição.
+    </p>
+    
+    <div class="service-card">
+      <h3>🎼 Aulas Individuais</h3>
+      <p>
+        Acompanhamento personalizado para desenvolver competências
+        musicais de acordo com o nível e os objectivos do aluno.
+      </p>
+    </div>
+    
+    <div class="service-card">
+      <h3>👥 Aulas em Grupo</h3>
+      <p>
+        Aprendizagem colectiva que promove prática musical,
+        interação, disciplina e espírito de equipa.
+      </p>
+    </div>
+    
+    <div class="service-card">
+      <h3>💻 Aulas Online</h3>
+      <p>
+        Formação musical à distância com orientação e acompanhamento
+        durante o processo de aprendizagem.
+      </p>
+    </div>
+    
+    <div class="service-card">
+      <h3>🏫 Programas para Escolas</h3>
+      <p>
+        Desenvolvemos programas de educação musical adaptados
+        às necessidades de escolas e instituições.
+      </p>
+    </div>
+    
+    <div class="service-card">
+      <h3>🎓 Workshops & Masterclasses</h3>
+      <p>
+        Actividades especiais de formação, aperfeiçoamento e partilha
+        de conhecimentos com estudantes e músicos.
+      </p>
+    </div>
+    
+    <div class="service-card">
+      <h3>🤝 Projectos Personalizados</h3>
+      <p>
+        Criamos soluções musicais específicas para instituições,
+        grupos, eventos e diferentes necessidades educativas.
+      </p>
+    </div>
+    
+  </div>
+  
+</section>
+
+
+
+  <section class="contact" id="contactos">
+  
+  <div class="contact-content">
+    
+    <span class="section-label">CONTACTOS</span>
+    
+    <h2>Vamos começar a sua <span>jornada musical.</span></h2>
+    
+    <p class="contact-intro">
+      Tem alguma dúvida, deseja conhecer os nossos cursos ou pretende
+      fazer uma inscrição? Entre em contacto connosco.
+    </p>
+    
+    <div class="contact-item">
+  <h3>📱 WhatsApp</h3>
+  <p><a href="https://wa.me/244951587773" style="color:#d4af37; text-decoration:none;">951 587 773</a></p>
+  <p>Fale directamente connosco para obter informações sobre cursos, horários e inscrições.</p>
+</div>
+    
+    <div class="contact-item">
+  <h3>📧 E-mail</h3>
+  <p><a href="mailto:ngunzaexecutivemusicschool777@gmail.com" style="color:#d4af37; text-decoration:none; overflow-wrap:anywhere;">ngunzaexecutivemusicschool777@gmail.com</a></p>
+  <p>Envie-nos a sua mensagem e teremos todo o prazer em responder.</p>
+</div>
+    
+    <div class="contact-item">
+      <h3>📍 Localização</h3>
+      <p>
+        Luanda — Angola
+      </p>
+    </div>
+    
+    <a href="https://wa.me/244951587773" class="contact-button">FALE CONNOSCO</a>
+  
+</section>
+
+<footer class="footer">
+  
+  <div class="footer-logo">
+    NGUNZA EXECUTIVE MUSIC SCHOOL
+  </div>
+  
+  <p>
+    Excelência musical. Formação com propósito.
+  </p>
+  
+  <div class="footer-line"></div>
+  
+  <p>
+    Educar pela Música. Inspirar pelo Exemplo. Criando o Legado.
+  </p>
+  
+  <p class="footer-copy">
+    © 2026 Ngunza Executive Music School. Todos os direitos reservados.
+  </p>
+  
+</footer>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+  }
+</script>
+</body>
+</html>
