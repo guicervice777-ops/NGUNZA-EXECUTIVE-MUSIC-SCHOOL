@@ -704,6 +704,70 @@
 .mobile-menu a:hover {
   color: #d4af37;
 }
+    
+/* =================================
+   REFINAMENTO PREMIUM — NGUNZA
+================================= */
+
+/* Cabeçalho */
+header {
+  position: relative;
+  z-index: 1001;
+}
+
+/* Página inicial */
+.hero {
+  min-height: auto;
+  padding: 85px 25px 90px;
+}
+
+/* Título principal */
+.hero h1 {
+  font-size: clamp(36px, 6vw, 54px);
+  line-height: 1.15;
+  letter-spacing: 0.5px;
+  max-width: 850px;
+  margin-bottom: 28px;
+}
+
+/* Frase institucional */
+.hero h2 {
+  max-width: 650px;
+  font-size: clamp(20px, 3vw, 25px);
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Texto de apresentação */
+.hero p {
+  max-width: 620px;
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 38px;
+}
+
+/* Botões */
+.btn {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease,
+              color 0.3s ease,
+              transform 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #e5c45a;
+  transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+  background: #d4af37;
+  color: #000;
+  transform: translateY(-2px);
+}
+
   </style>
   
 </head>
