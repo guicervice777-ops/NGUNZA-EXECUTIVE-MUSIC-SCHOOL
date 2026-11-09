@@ -835,47 +835,38 @@ header {
 ===================================== */
 
 .courses-content {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.courses-content {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-}
-
-.course-card {
-    margin-bottom: 0;
-    min-height: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-}
-
-.course-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(212, 175, 55, 0.12);
-}
-
-@media (max-width: 650px) {
-    .courses-content {
-        grid-template-columns: 1fr;
-    }
-
-    .course-card {
-        min-height: auto;
-    .courses-content {
-    display: block;
-    max-width: 1100px;
-    margin: 0 auto;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .courses-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.courses-grid .course-card {
+  margin-bottom: 0;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.courses-grid .course-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.12);
+}
+
+@media (max-width: 650px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .courses-grid .course-card {
+    min-height: auto;
+  }
 }
 
 .courses-grid .course-card {
@@ -1026,61 +1017,60 @@ header {
 
 
   <!-- FUTUROS BLOCOS -->
-
-  <section class="courses" id="cursos">
+<section class="courses" id="cursos">
   <div class="courses-content">
-    
+
     <span class="section-label">NOSSOS CURSOS</span>
-    
+
     <h2>Encontre o seu <span>caminho musical.</span></h2>
-    
+
     <p class="courses-intro">
       Formação musical pensada para diferentes idades, níveis e objectivos,
       com acompanhamento personalizado e foco no desenvolvimento artístico.
     </p>
-    <divclass="courses-grid">
-    <div class="course-card">
-      <h3>🎹 Piano</h3>
-      <p>
-        Desenvolva técnica, leitura musical, coordenação, interpretação
-        e musicalidade através do piano.
-      </p>
+
+    <div class="courses-grid">
+      <div class="course-card">
+        <h3>🎹 Piano</h3>
+        <p>
+          Desenvolva técnica, leitura musical, coordenação, interpretação
+          e musicalidade através do piano.
+        </p>
+      </div>
+
+      <div class="course-card">
+        <h3>🎸 Guitarra</h3>
+        <p>
+          Aprenda acordes, ritmo, técnica, acompanhamento e repertório,
+          desenvolvendo confiança para tocar e interpretar.
+        </p>
+      </div>
+
+      <div class="course-card">
+        <h3>🎤 Canto</h3>
+        <p>
+          Trabalhe respiração, afinação, projecção vocal, interpretação
+          e expressão artística.
+        </p>
+      </div>
+
+      <div class="course-card">
+        <h3>🎼 Formação Musical</h3>
+        <p>
+          Desenvolva conhecimentos de teoria musical, leitura, ritmo,
+          percepção auditiva e linguagem musical.
+        </p>
+      </div>
+
+      <div class="course-card">
+        <h3>💻 Formação Musical Online</h3>
+        <p>
+          Estude música à distância com acompanhamento e orientação,
+          mantendo uma aprendizagem prática e progressiva.
+        </p>
+      </div>
     </div>
-    
-    <div class="course-card">
-      <h3>🎸 Guitarra</h3>
-      <p>
-        Aprenda acordes, ritmo, técnica, acompanhamento e repertório,
-        desenvolvendo confiança para tocar e interpretar.
-      </p>
-    </div>
-    
-    <div class="course-card">
-      <h3>🎤 Canto</h3>
-      <p>
-        Trabalhe respiração, afinação, projecção vocal, interpretação
-        e expressão artística.
-      </p>
-    </div>
-    
-    <div class="course-card">
-      <h3>🎼 Formação Musical</h3>
-      <p>
-        Desenvolva conhecimentos de teoria musical, leitura, ritmo,
-        percepção auditiva e linguagem musical.
-      </p>
-    </div>
-    
-    <div class="course-card">
-      <h3>💻 Formação Musical Online</h3>
-      <p>
-        Estude música à distância com acompanhamento e orientação,
-        mantendo uma aprendizagem prática e progressiva.
-      </p>
-    </div>
-      
-   </div> 
-    
+
   </div>
 </section>
   
