@@ -231,6 +231,18 @@
 
     @media (max-width: 600px) {
 
+      .hero {
+        min-height: 500px;
+        padding: 85px 20px 75px;
+      }
+
+      .hero-content {
+        width: 100%;
+      }
+
+      .hero-video {
+        object-position: center;
+      }
       .hero h1 {
         font-size: 38px;
       }
@@ -782,16 +794,39 @@ header {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background:
-        radial-gradient(
-            ellipse at 50% 20%,
-            rgba(212, 175, 55, 0.16),
-            transparent 65%
-        ),
-        linear-gradient(135deg, #080808, #191919 55%, #080808);
+    overflow: hidden;
+    isolation: isolate;
+    background: #080808;
     border-bottom: 1px solid rgba(212, 175, 55, 0.35);
 }
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
 
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.68),
+        rgba(0, 0, 0, 0.78)
+    );
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    
 .hero h1 {
     max-width: 950px;
     font-size: clamp(38px, 6vw, 64px);
@@ -965,6 +1000,13 @@ header {
 
   <section class="hero">
 
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="hero-piano.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
     <h1>
       NGUNZA EXECUTIVE<br>
       MUSIC SCHOOL
@@ -982,7 +1024,6 @@ header {
     </p>
 
     <div class="buttons">
-
       <a href="#cursos" class="btn btn-primary">
         CONHEÇA OS NOSSOS CURSOS
       </a>
@@ -990,10 +1031,10 @@ header {
       <a href="#contactos" class="btn btn-secondary">
         FALE CONNOSCO
       </a>
-
     </div>
+  </div>
 
-  </section>
+</section>
   
 
   <!-- QUEM SOMOS -->
