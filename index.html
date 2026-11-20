@@ -1207,7 +1207,10 @@ header {
       <div class="course-card">
 
         <div class="course-video">
-          <video controls preload="none" playsinline>
+          <video controls preload="none" playsinline
+            
+            onloadedmetadata="this.playbackRate = 0.85">
+            
             <source src="curso-piano.mp4" type="video/mp4">
             O seu navegador não suporta vídeos.
           </video>
