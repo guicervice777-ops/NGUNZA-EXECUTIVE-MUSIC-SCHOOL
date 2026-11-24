@@ -1004,6 +1004,33 @@ header {
     object-fit: contain;
   }
 }
+  /* WHATSAPP FLUTUANTE */
+
+.whatsapp-float {
+  position: fixed;
+  right: 22px;
+  bottom: 25px;
+  width: 58px;
+  height: 58px;
+  background: #d4af37;
+  color: #000;
+  border: 2px solid #f5dc85;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 32px;
+  box-shadow: 0 5px 18px rgba(212, 175, 55, 0.35);
+  z-index: 9999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.5);
+}
+    
   </style>
   
 </head>
@@ -1624,6 +1651,16 @@ header {
   </p>
   
 </footer>
+  <!-- WHATSAPP FLUTUANTE -->
+<a href="https://wa.me/244951587773"
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener"
+   aria-label="Fale connosco pelo WhatsApp">
+
+  <span>☏</span>
+
+</a>
 <script>
   function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
